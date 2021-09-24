@@ -9,7 +9,7 @@ import UIKit
 
 class MemoComposeViewController: UIViewController, ViewModelBindableType {
     
-    var viewModel: MemoListViewModel
+    var viewModel: MemoComposeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
