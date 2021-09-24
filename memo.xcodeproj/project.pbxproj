@@ -10,7 +10,6 @@
 		F31F5F6DB0DE7BFF4041EB23 /* Pods_memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EDA6A1965BC73818298B42 /* Pods_memo.framework */; };
 		F79907B926FC0FC0006207E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79907B826FC0FC0006207E4 /* AppDelegate.swift */; };
 		F79907BB26FC0FC0006207E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79907BA26FC0FC0006207E4 /* SceneDelegate.swift */; };
-		F79907BD26FC0FC0006207E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79907BC26FC0FC0006207E4 /* ViewController.swift */; };
 		F79907C026FC0FC0006207E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79907BE26FC0FC0006207E4 /* Main.storyboard */; };
 		F79907C226FC0FC1006207E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79907C126FC0FC1006207E4 /* Assets.xcassets */; };
 		F79907C526FC0FC1006207E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79907C326FC0FC1006207E4 /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 		F79907B526FC0FC0006207E4 /* memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79907B826FC0FC0006207E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79907BA26FC0FC0006207E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F79907BC26FC0FC0006207E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F79907BF26FC0FC0006207E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F79907C126FC0FC1006207E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F79907C426FC0FC1006207E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,15 +69,54 @@
 		F79907B726FC0FC0006207E4 /* memo */ = {
 			isa = PBXGroup;
 			children = (
+				F79907D026FC55F9006207E4 /* Scene */,
+				F79907CF26FC55E9006207E4 /* Service */,
+				F79907CE26FC55CF006207E4 /* Model */,
+				F79907CD26FC55C9006207E4 /* ViewController */,
+				F79907CC26FC55B8006207E4 /* ViewModel */,
 				F79907B826FC0FC0006207E4 /* AppDelegate.swift */,
 				F79907BA26FC0FC0006207E4 /* SceneDelegate.swift */,
-				F79907BC26FC0FC0006207E4 /* ViewController.swift */,
-				F79907BE26FC0FC0006207E4 /* Main.storyboard */,
 				F79907C126FC0FC1006207E4 /* Assets.xcassets */,
-				F79907C326FC0FC1006207E4 /* LaunchScreen.storyboard */,
 				F79907C626FC0FC1006207E4 /* Info.plist */,
 			);
 			path = memo;
+			sourceTree = "<group>";
+		};
+		F79907CC26FC55B8006207E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F79907CD26FC55C9006207E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F79907BE26FC0FC0006207E4 /* Main.storyboard */,
+				F79907C326FC0FC1006207E4 /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F79907CE26FC55CF006207E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F79907CF26FC55E9006207E4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F79907D026FC55F9006207E4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		FE4135C79C0005F11B91D659 /* Pods */ = {
@@ -205,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F79907BD26FC0FC0006207E4 /* ViewController.swift in Sources */,
 				F79907B926FC0FC0006207E4 /* AppDelegate.swift in Sources */,
 				F79907BB26FC0FC0006207E4 /* SceneDelegate.swift in Sources */,
 			);
