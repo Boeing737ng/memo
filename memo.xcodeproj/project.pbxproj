@@ -20,6 +20,10 @@
 		F7CD724726FD950E0037A487 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD724626FD950E0037A487 /* MemoListViewController.swift */; };
 		F7CD724926FD95360037A487 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD724826FD95360037A487 /* MemoDetailViewController.swift */; };
 		F7CD724B26FD95620037A487 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD724A26FD95620037A487 /* MemoComposeViewController.swift */; };
+		F7CD724D26FD98A30037A487 /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD724C26FD98A30037A487 /* MemoListViewModel.swift */; };
+		F7CD724F26FD98D20037A487 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD724E26FD98D20037A487 /* MemoDetailViewModel.swift */; };
+		F7CD725126FD98F70037A487 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD725026FD98F70037A487 /* MemoComposeViewModel.swift */; };
+		F7CD725326FD992E0037A487 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD725226FD992E0037A487 /* ViewModelBindableType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		F7CD724626FD950E0037A487 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		F7CD724826FD95360037A487 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
 		F7CD724A26FD95620037A487 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
+		F7CD724C26FD98A30037A487 /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
+		F7CD724E26FD98D20037A487 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
+		F7CD725026FD98F70037A487 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
+		F7CD725226FD992E0037A487 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,9 @@
 		F79907CC26FC55B8006207E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F7CD724C26FD98A30037A487 /* MemoListViewModel.swift */,
+				F7CD724E26FD98D20037A487 /* MemoDetailViewModel.swift */,
+				F7CD725026FD98F70037A487 /* MemoComposeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -111,6 +122,7 @@
 				F7CD724626FD950E0037A487 /* MemoListViewController.swift */,
 				F7CD724826FD95360037A487 /* MemoDetailViewController.swift */,
 				F7CD724A26FD95620037A487 /* MemoComposeViewController.swift */,
+				F7CD725226FD992E0037A487 /* ViewModelBindableType.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -280,11 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7B0185126FD5B87000A64EC /* MemoryStorage.swift in Sources */,
+				F7CD725126FD98F70037A487 /* MemoComposeViewModel.swift in Sources */,
 				F7CD724926FD95360037A487 /* MemoDetailViewController.swift in Sources */,
+				F7CD725326FD992E0037A487 /* ViewModelBindableType.swift in Sources */,
 				F7B0184F26FD5AC7000A64EC /* RxMemo.xcdatamodeld in Sources */,
 				F7B0184826FD5787000A64EC /* Memo.swift in Sources */,
 				F7B0184A26FD5929000A64EC /* MemoStorageType.swift in Sources */,
 				F79907B926FC0FC0006207E4 /* AppDelegate.swift in Sources */,
+				F7CD724D26FD98A30037A487 /* MemoListViewModel.swift in Sources */,
+				F7CD724F26FD98D20037A487 /* MemoDetailViewModel.swift in Sources */,
 				F7CD724726FD950E0037A487 /* MemoListViewController.swift in Sources */,
 				F7CD724B26FD95620037A487 /* MemoComposeViewController.swift in Sources */,
 				F79907BB26FC0FC0006207E4 /* SceneDelegate.swift in Sources */,
