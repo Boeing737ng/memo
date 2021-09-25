@@ -53,7 +53,7 @@ class SceneCoordinator: SceneCoordinatorType {
     }
     
     func close(animated: Bool) -> Completable {
-        <#code#>
+        
     }
     
     
