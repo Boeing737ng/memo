@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		949EBD16270093C40087EF23 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EBD15270093C40087EF23 /* CommonViewModel.swift */; };
 		F31F5F6DB0DE7BFF4041EB23 /* Pods_memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EDA6A1965BC73818298B42 /* Pods_memo.framework */; };
 		F79907B926FC0FC0006207E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79907B826FC0FC0006207E4 /* AppDelegate.swift */; };
 		F79907BB26FC0FC0006207E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79907BA26FC0FC0006207E4 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		949EBD15270093C40087EF23 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		C15FF5229BF2139E640CC7AA /* Pods-memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memo.debug.xcconfig"; path = "Target Support Files/Pods-memo/Pods-memo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB27F2CA194C4DBC8194B90C /* Pods-memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memo.release.xcconfig"; path = "Target Support Files/Pods-memo/Pods-memo.release.xcconfig"; sourceTree = "<group>"; };
 		F0EDA6A1965BC73818298B42 /* Pods_memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				F7CD724C26FD98A30037A487 /* MemoListViewModel.swift */,
 				F7CD724E26FD98D20037A487 /* MemoDetailViewModel.swift */,
 				F7CD725026FD98F70037A487 /* MemoComposeViewModel.swift */,
+				949EBD15270093C40087EF23 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				F7CD725926FDB7620037A487 /* SceneCoordinatorType.swift in Sources */,
 				F7CD724D26FD98A30037A487 /* MemoListViewModel.swift in Sources */,
 				F7CD724F26FD98D20037A487 /* MemoDetailViewModel.swift in Sources */,
+				949EBD16270093C40087EF23 /* CommonViewModel.swift in Sources */,
 				F7CD725526FDA04A0037A487 /* TransitionModel.swift in Sources */,
 				F7CD724726FD950E0037A487 /* MemoListViewController.swift in Sources */,
 				F7CD724B26FD95620037A487 /* MemoComposeViewController.swift in Sources */,
