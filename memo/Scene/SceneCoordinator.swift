@@ -21,6 +21,7 @@ class SceneCoordinator: SceneCoordinatorType {
         self.currentVC = window.rootViewController!
     }
     
+    @discardableResult
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable {
         //  전환결과 방출
         
@@ -56,6 +57,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return subject.ignoreElements()
     }
     
+    @discardableResult
     func close(animated: Bool) -> Completable {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {
