@@ -23,6 +23,9 @@ class SceneCoordinator: SceneCoordinatorType {
     
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable {
         //  전환결과 방출
+        
+        // Completable.create() 로도 생성 가능하지만 클로저 내부에서 구현해하하고 코드가 복잡해져서
+        // 그냥 PublisjSubject 사용
         let subject = PublishSubject<Void>()
         
         let target = scene.instantiate()
@@ -49,11 +52,30 @@ class SceneCoordinator: SceneCoordinatorType {
             currentVC = target
         }
         
+        // Completable에서 subject 리턴할때
         return subject.ignoreElements()
     }
     
     func close(animated: Bool) -> Completable {
-        
+        return Completable.create { [unowned self] completable in
+            if let presentingVC = self.currentVC.presentingViewController {
+                self.currentVC.dismiss(animated: animated) {
+                    self.currentVC = presentingVC
+                    completable(.completed)
+                }
+            } else if let nav = self.currentVC.navigationController {
+                guard nav.popViewController(animated: animated) != nil else {
+                    completable(.error(TransitionError.cannotPop))
+                    return Disposables.create()
+                }
+                self.currentVC = nav.viewControllers.last!
+                completable(.completed)
+            } else {
+                completable(.error(TransitionError.unknown))
+            }
+            
+            return Disposables.create()
+        }
     }
     
     
