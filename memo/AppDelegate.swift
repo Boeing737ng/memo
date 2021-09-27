@@ -14,7 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // 앱이 실행되면 storage, coordinator 생성
+        // 뷰모델은 두 인스턴스를 통해 메모 저장, 화면전환 처리
+        // 이들에 대한 의존성은 뷰모델을 생성할때 생성자를 통해 주입
+        //
+        let storage = MemoryStorage()
+        let coordinator = SceneCoordinator(window: window!)
+        let listViewModel = MemoListViewModel(title: "나의 메모", sceneCoordinator: coordinator, storage: storage)
+        let listScene = Scene.list(listViewModel)
+        
+        
+        coordinator.transition(to: listScene, using: .root, animated: false)
+        
+        
         return true
     }
 
