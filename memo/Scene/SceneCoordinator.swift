@@ -54,7 +54,7 @@ class SceneCoordinator: SceneCoordinatorType {
         }
         
         // Completable에서 subject 리턴할때
-        return subject.ignoreElements()
+        return Completable.empty()
     }
     
     @discardableResult
