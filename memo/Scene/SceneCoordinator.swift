@@ -54,6 +54,8 @@ class SceneCoordinator: SceneCoordinatorType {
         }
         
         // Completable에서 subject 리턴할때
+        
+        //return subject.ignoreElements() << 이거 형변환 안되서 empty()로...
         return Completable.empty()
     }
     
