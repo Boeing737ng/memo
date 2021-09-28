@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MemoDetailViewController: UIViewController,ViewModelBindableType {
     
@@ -23,7 +24,14 @@ class MemoDetailViewController: UIViewController,ViewModelBindableType {
     }
     
     func bindViewModel() {
-        
+        viewModel.title
+            .drive(navigationItem.rx.title)
+            .disposed(by: rx.disposeBag)
+        viewModel.contents
+            .bind(to: listTableView.rx.items) { tableView, row, value in
+                
+                
+            }
     }
 
 }
