@@ -9,6 +9,13 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        // 네비게이션 컨트롤러라면 마지막 차일드를 리턴하고 나머지경우엔 self 리턴
+        return self.children.first ?? self
+    }
+}
+
 class SceneCoordinator: SceneCoordinatorType {
     
     private let disposeBag = DisposeBag()
@@ -33,7 +40,7 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentVC = target
+            currentVC = target.sceneViewController
             window.rootViewController = target
             subject.onCompleted()
         case .push:
@@ -42,15 +49,21 @@ class SceneCoordinator: SceneCoordinatorType {
                 break
             }
             
+            nav.rx.willShow
+                .subscribe(onNext: {[unowned self] evt in
+                    self.currentVC = evt.viewController.sceneViewController
+                })
+                .disposed(by: disposeBag)
+            
             nav.pushViewController(target, animated: animated)
             
-            currentVC = target
+            currentVC = target.sceneViewController
             subject.onCompleted()
         case .modal:
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
-            currentVC = target
+            currentVC = target.sceneViewController
         }
         
         // Completable에서 subject 리턴할때
@@ -64,7 +77,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) {
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             } else if let nav = self.currentVC.navigationController {

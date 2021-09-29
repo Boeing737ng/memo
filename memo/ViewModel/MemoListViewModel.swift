@@ -28,6 +28,7 @@ class MemoListViewModel: CommonViewModel {
         }
     }
     
+    //메소드형태 액션
     func makeCreateAction() -> CocoaAction {
         return CocoaAction { _ in
             return self.storage.createMemo(content: "")
@@ -42,4 +43,19 @@ class MemoListViewModel: CommonViewModel {
             
         }
     }
+    
+    // 속성형태 액션
+    lazy var detailAction: Action<Memo, Void> = {
+        // 클로져 내부에서 self에 접근해야하기 때문에 lazy로 선언
+        // lazy로 하면 생성 후 추후에 클래스멤버 접근할것이라는 뜻.
+        
+        return Action { memo in
+            let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator, storage: self.storage)
+            let detailScene = Scene.detail(detailViewModel)
+            
+            return self.sceneCoordinator.transition(to: detailScene, using: .push, animated: true).asObservable().map { _ in }
+        }
+    }()
+    
+    
 }
